@@ -1,0 +1,152 @@
+---
+const translations = Astro.props.translations;
+---
+
+{
+  translations ? (
+    <section id="contact">
+      <div class="pt-24 px-4 md:px-20 xl:px-24">
+        <p class="text-4xl md:text-5xl text-green-500 font-bold mb-6">
+          {translations.contact.grandtittle}
+        </p>
+        <div class="flex flex-col bg-zinc-200 dark:bg-slate-700 px-5 xl:mx-40 py-7 rounded-3xl border-dashed border-2 border-green-500">
+          <form method="POST" id="form" class="flex flex-col">
+            <input
+              type="hidden"
+              name="access_key"
+              value="db65c5ee-6b5c-48ef-a0bb-9639e11d39c2"
+            />
+            <label
+              for=""
+              class="dark:text-white text-green-500 font-bold md:text-xl"
+            >
+              * {translations.contact.name}
+            </label>
+            <input
+              type="text"
+              name="name"
+              class="my-3 px-3 py-1 dark:bg-slate-500 dark:text-white rounded-lg border border-slate-400 md:text-xl"
+              required
+            />
+            <label
+              for=""
+              class="dark:text-white text-green-500 font-bold md:text-xl"
+            >
+              * {translations.contact.lastname}
+            </label>
+            <input
+              type="text"
+              name="lastname"
+              class="my-3 px-3 py-1 dark:bg-slate-500 dark:text-white rounded-lg border border-slate-400 md:text-xl"
+              required
+            />
+            <label
+              for=""
+              class="dark:text-white text-green-500 font-bold md:text-xl"
+            >
+              * {translations.contact.email}
+            </label>
+            <input
+              type="email"
+              name="email"
+              class="my-3 px-3 py-1 dark:bg-slate-500 dark:text-white rounded-lg border border-slate-400 md:text-xl"
+              required
+            />
+            <label
+              for=""
+              class="dark:text-white text-green-500 font-bold md:text-xl"
+            >
+              * {translations.contact.topic}
+            </label>
+            <input
+              type="text"
+              name="theme"
+              class="my-3 px-3 py-1 dark:bg-slate-500 dark:text-white rounded-lg border border-slate-400 md:text-xl"
+              required
+            />
+            <label
+              for=""
+              class="dark:text-white text-green-500 font-bold md:text-xl"
+            >
+              * {translations.contact.message}
+            </label>
+            <textarea
+              name="message"
+              class="my-3 px-3 py-1 dark:bg-slate-500 dark:text-white rounded-lg border border-slate-400 md:text-xl"
+              required
+            />
+            <button
+              type="submit"
+              class="mt-5 mx-auto px-7 md:px-10 py-1 bg-green-500 text-white rounded-3xl text-lg md:text-2xl font-bold hover:bg-green-700 transition duration-700 ease-in-out"
+            >
+              {translations.contact.button}
+            </button>
+            <div id="result" class="active:block bg-green-400 rounded-xl px-2 py-1 mt-4"/>
+          </form>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <p>Error: Traducciones no encontradas.</p>
+  )
+}
+
+<style>
+  section {
+    font-family: "Anaheim", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+</style>
+
+<script is:inline>
+  const form = document.getElementById("form");
+  const result = document.getElementById("result");
+
+  form.addEventListener("submit", function (e) {
+    const formData = new FormData(form);
+    e.preventDefault();
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    result.innerHTML = "Please wait...";
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          result.innerHTML = json.name;
+          result.innerHTML = json.lastname;
+          result.innerHTML = json.email;
+          result.innerHTML = json.theme;
+          result.innerHTML = json.message;
+        } else {
+          console.log(response);
+          result.innerHTML = json.name;
+          result.innerHTML = json.lastname;
+          result.innerHTML = json.email;
+          result.innerHTML = json.theme;
+          result.innerHTML = json.message;
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        result.innerHTML = "Something went wrong!";
+      })
+      .then(function () {
+        form.reset();
+        setTimeout(() => {
+          result.style.display = "none";
+        }, 3000);
+      });
+  });
+</script>

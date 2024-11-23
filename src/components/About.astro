@@ -1,0 +1,115 @@
+---
+const translations = Astro.props.translations;
+---
+
+{
+  translations ? (
+    <section id="about" class="flex flex-col xl:flex-row pt-28 xl:pt-32 2xl:pt-36 px-4 md:px-20 xl:px-24 2xl:mx-24 2xl:px-0">
+      <div>
+        <div class="flex flex-col mb-4">
+          <div class="flex flex-row mb-4">
+            <p class="text-3xl md:text-4xl 2xl:text-6xl font-bold tracking-wide dark:text-white">
+              {translations.about.i}&nbsp;
+              <p class="text-3xl md:text-4xl 2xl:text-6xl font-bold text-green-500">
+                {translations.about.name}
+              </p>
+            </p>
+          </div>
+          <p class="text-[44px] md:text-7xl 2xl:text-9xl mb-4 xl:mt-5 font-bold tracking-wide md:tracking-widest xl:tracking-wider leading-[3.5rem] dark:text-white">
+            {translations.about.tittle}
+          </p>
+          <p class="text-3xl md:text-4xl 2xl:text-6xl xl:mt-5 font-bold tracking-normal md:tracking-widest leading-[3rem] md:leading-[3.5rem] 2xl:leading-[5rem] dark:text-white">
+            {translations.about.descript}
+          </p>
+        </div>
+        <div class="flex flex-row mb-4 xl:mt-10">
+          <div>
+            <a
+              href="https://github.com/PABLOCESAR2412"
+              class="flex flex-row justify-center border-2 border-black text-xl font-bold py-2 px-6 rounded-3xl dark:text-white dark:border-white dark:shadow-white shadow-md shadow-black transition duration-700 ease-in-out"
+            >
+              <img
+                src="/icon_github_white.svg"
+                alt=""
+                class="hidden dark:block w-7 h-7 mr-1"
+              />
+              <img
+                src="/icon_github_black.svg"
+                alt=""
+                class="dark:hidden w-7 h-7 mr-1"
+              />
+              <p class="">GitHub</p>
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/pablo-torres-5aab63239/"
+              class="flex flex-row justify-center border-2 border-black text-black text-xl font-bold py-2 px-6 ml-5 rounded-3xl dark:text-white dark:border-white dark:shadow-white shadow-md shadow-black transition duration-700 ease-in-out"
+            >
+              <img
+                src="/icon_linkedin_white.svg"
+                alt=""
+                class="hidden dark:block w-7 h-7 mr-1"
+              />
+              <img
+                src="/icon_linkedin_black.svg"
+                alt=""
+                class="dark:hidden w-7 h-7 mr-1"
+              />
+              <p class="">Linkedin</p>
+            </a>
+          </div>
+          <div class="hidden md:block">
+            <a
+              href="https://drive.google.com/file/d/1lw7qsqIgmbMVrCzIxy4FGuKdlNEzQ3v6/view"
+              class="flex flex-row justify-center border-2 mb-5 border-black text-black text-xl font-bold py-2 px-6 ml-5 w-24 rounded-3xl dark:text-white dark:border-white dark:shadow-white shadow-md shadow-black transition duration-700 ease-in-out"
+            >
+              <img
+                src="/icon_cv_white.svg"
+                alt=""
+                class="hidden dark:block w-7 h-7 mr-1"
+              />
+              <img
+                src="/icon_cv_black.svg"
+                alt=""
+                class="dark:hidden w-7 h-7 mr-1"
+              />
+              <p class="">CV</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://drive.google.com/file/d/1lw7qsqIgmbMVrCzIxy4FGuKdlNEzQ3v6/view"
+          class=" md:hidden flex flex-row justify-center border-2 mb-5 border-black text-black text-xl font-bold py-2 px-6 w-24 rounded-3xl dark:text-white dark:border-white dark:shadow-white shadow-md shadow-black transition duration-700 ease-in-out"
+        >
+          <img
+            src="/icon_cv_white.svg"
+            alt=""
+            class="hidden dark:block w-7 h-7 mr-1"
+          />
+          <img src="/icon_cv_black.svg" alt="" class="dark:hidden w-7 h-7 mr-1" />
+          <p class="">CV</p>
+        </a>
+      </div>
+      <div class="w-full flex flex-col items-center justify-center">
+        <img src="/profile.jpg" class="bg-slate-300 w-48 h-60 md:w-60 md:h-80 xl:w-72 xl:h-96 2xl:w-[380px] 2xl:h-[500px] mb-3 rounded-3xl" />
+        <div class="py-1.5 px-4 md:px-6 xl:px-10 xl:mt-6 text-green-600 font-bold text-lg md:text-xl xl:text-2xl border-2 border-green-600 rounded-3xl shadow-md shadow-green-600 dark:shadow-green-600 transition duration-700 ease-in-out">
+          •&nbsp;&nbsp;{translations.about.status}
+        </div>
+      </div>
+    </section>
+  ) : (
+    <p>Error: Traducciones no encontradas.</p>
+  )
+}
+
+<style>
+  section {
+    font-family: "Anaheim", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+</style>

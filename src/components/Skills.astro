@@ -1,0 +1,327 @@
+---
+const translations = Astro.props.translations;
+---
+
+{
+  translations ? (
+    <section class="pt-24 px-4 md:px-20 xl:px-24" id="skill">
+      <p class="text-green-500 font-extrabold text-4xl md:text-5xl">
+        {translations.skills.skills}
+      </p>
+      <div class="flex flex-col">
+
+        <div class="xl:flex xl:flex-row xl:justify-around xl:mt-7">
+          <!--Lenguajes -->
+          <div class="bg-zinc-200 dark:bg-slate-700 rounded-3xl mt-5 px-4 xl:px-10 2xl:px-[70px] py-6 xl:py-10 md:py-8 text-center">
+            <p class=" dark:text-white text-2xl md:text-3xl font-bold">
+              {translations.skills.language}
+            </p>
+            <div class="grid grid-cols-3 gap-x-4 xl:gap-x-10 2xl:gap-x-24 gap-y-7 mt-7">
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_c_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_c_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">C</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_cplusplus_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_cplusplus_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">C++</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_csharp_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_csharp_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">C#</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_java_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_java_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">Java</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_js_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_js_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">JavaScript</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_php_wihte.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_php_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">PHP</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="bg-zinc-200 dark:bg-slate-700 rounded-3xl mt-5 px-4 xl:px-14 2xl:px-16 py-6 xl:py-10 text-center">
+            <p class="dark:text-white text-2xl md:text-3xl font-bold">Frontend</p>
+            <div class="grid grid-cols-3 gap-x-4 xl:gap-x-10 2xl:gap-x-28 gap-y-7 mt-7">
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_html_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_html_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">HTML5</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_css_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_css_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">CSS3</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_tailwind_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_tailwind_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">Tailwind</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_angular_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_angular_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">Angular</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_astro_white.svg"
+                  class="hidden dark:block w-[41px] md:w-[57.5px] hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_astro_dark.svg"
+                  class="dark:hidden w-[41px] md:w-[57.5px] hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">Astro</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_vuejs_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_vuejs_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">VueJS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="xl:flex xl:flex-row xl:justify-around xl:mt-7">
+          <!-- Backend -->
+          <div class="bg-zinc-200 dark:bg-slate-700 rounded-3xl mt-5 px-4 xl:px-12 py-6 xl:py-10 2xl:px-[86px] md:py-8 text-center">
+            <p class="dark:text-white text-2xl md:text-3xl font-bold">Backend</p>
+            <div class="grid grid-cols-3 gap-x-4 xl:gap-x-[70px] 2xl:gap-x-[120px] mt-7">
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_nodejs_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_nodejs_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">NodeJS</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_laravel_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_laravel_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">Laravel</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_nestjs_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_nestjs_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">NestJS</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- BD -->
+          <div class="bg-zinc-200 dark:bg-slate-700 rounded-3xl mt-5 px-4 xl:px-10 2xl:px-16 py-6 xl:py-10 md:py-8 text-center">
+            <p class="dark:text-white text-2xl md:text-3xl font-bold">{translations.skills.bd}</p>
+            <div class="grid grid-cols-3 gap-x-4 xl:gap-x-6 2xl:gap-x-20 mt-7">
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_sqlserver_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_sqlserver_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">SQL Server</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_postgresql_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_postgresql_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">PostgreSQL</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_mysql_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_mysql_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">MySQL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- Versionamiento -->
+          <div class="bg-zinc-200 dark:bg-slate-700 rounded-3xl mt-5 xl:mt-11 px-4 xl:px-14 2xl:px-20 py-6 md:py-8 xl:mx-auto text-center 2xl:justify-center">
+            <p class="dark:text-white text-2xl md:text-3xl font-bold">{translations.skills.version}</p>
+            <div class="grid grid-cols-2 gap-x-4 xl:gap-x-16 2xl:gap-x-28 mt-7">
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_git_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_git_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">Git</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  src="/icon_github_white.svg"
+                  class="hidden dark:block w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <img
+                  src="/icon_github_black.svg"
+                  class="dark:hidden w-14 md:w-20 hover:scale-125 transition duration-700 ease-in-out"
+                  alt=""
+                />
+                <p class="dark:text-white text-xl md:text-2xl mt-3 font-bold">GitHub</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+  ) : (
+    <p>Error: Traducciones no encontradas.</p>
+  )
+}
+
+<style>
+  section {
+    font-family: "Anaheim", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+</style>

@@ -1,0 +1,59 @@
+---
+const translations = Astro.props.translations;
+---
+
+{
+  translations ? (
+    <section>
+      <div class="flex flex-col mt-10 pb-3">
+        <div class="flex flex-row justify-center border-b-2 border-green-500 dark:border-white pb-3">
+          <a href="https://github.com/PABLOCESAR2412">
+            <img
+              src="/icon_github_white.svg"
+              alt=""
+              class="hidden dark:block w-7 md:w-8 mr-3"
+            />
+          </a>
+          <a href="https://github.com/PABLOCESAR2412">
+            <img
+              src="/icon_github_black.svg"
+              alt=""
+              class="dark:hidden w-7 md:w-8 mr-3"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/pablo-torres-5aab63239/">
+            <img
+              src="/icon_linkedin_white.svg"
+              alt=""
+              class="hidden dark:block w-7 md:w-8"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/pablo-torres-5aab63239/">
+            <img
+              src="/icon_linkedin_black.svg"
+              alt=""
+              class="dark:hidden w-7 md:w-8"
+            />
+          </a>
+          
+        </div>
+        <div class="pt-3">
+          <p class="dark:text-slate-400 text-slate-600 text-center md:text-lg">
+            ©2024 Derechos Reservados, Pablo Torres
+          </p>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <p>Error: Traducciones no encontradas.</p>
+  )
+}
+
+<style>
+  section {
+    font-family: "Anaheim", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+</style>

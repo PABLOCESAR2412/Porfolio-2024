@@ -1,0 +1,212 @@
+---
+const translations = Astro.props.translations;
+
+const targetLocale = Astro.props.locale === 'en' ? 'es' : 'en';
+const languageIcon = Astro.props.locale === 'en'
+  ? '/icon_spain.svg'  // Ruta del icono para español
+  : '/icon_usa.svg';    // Ruta del icono para inglés
+---
+
+<header
+  class="fixed top-[-1px] left-0 right-0 backdrop-blur-md bg-white/80 dark:bg-slate-900/90 px-4 md:px-7 z-50"
+>
+{translations ? (
+  <nav class="w-full flex flex-row justify-between items-center">
+    <div class="">
+      <!-- Logo -->
+      <a href="/es" class="flex items-center">
+        <img src="/Logo_2.svg" alt="logo" class="w-28 md:w-32 lg:w-32 2xl:w-40" />
+      </a>
+    </div>
+
+    <!-- Nav Links -->
+    <div>
+      <ul
+        id="menu"
+        class="hidden lg:flex space-x-4 text-lg 2xl:text-xl font-semibold my-3 m-auto"
+      >
+        <li
+          class="hover:bg-green-300 dark:text-white dark:hover:bg-green-700 my-3 py-1.5 px-4 rounded-lg transition duration-700 ease-in-out"
+        >
+          <a tabindex="1" href="#about">{translations.navbar.about}</a>
+        </li>
+        <li
+          class="hover:bg-green-300 dark:text-white dark:hover:bg-green-700 my-3 py-1.5 px-4 rounded-lg transition duration-700 ease-in-out"
+        >
+          <a href="#proyect" tabindex="2">{translations.navbar.proyect}</a>
+        </li>
+        <li
+          class="hover:bg-green-300 dark:text-white dark:hover:bg-green-700 my-3 py-1.5 px-4 rounded-lg transition duration-700 ease-in-out"
+        >
+          <a href="#skill" tabindex="3">{translations.navbar.skill}</a>
+        </li>
+        <li
+          class="hover:bg-green-300 dark:text-white dark:hover:bg-green-700 my-3 py-1.5 px-4 rounded-lg transition duration-700 ease-in-out"
+        >
+          <a href="#experience" tabindex="4">{translations.navbar.experience}</a>
+        </li>
+        <li
+          class="hover:bg-green-300 dark:text-white dark:hover:bg-green-700 my-3 py-1.5 px-4 rounded-lg transition duration-700 ease-in-out" 
+        >
+          <a href="#contact" tabindex="5">{translations.navbar.contact}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="flex flex-row ">
+      <div class="hover:bg-green-300 dark:hover:bg-green-700 cursor-pointer transition duration-700 ease-in-out rounded-lg my-5">
+        <button class="flex flex-row py-2 px-4 h-full text-black dark:text-white" onclick={`window.location.href='/${targetLocale}'`}>
+          <!-- Icono que cambia con el idioma -->
+          <img src={languageIcon} alt="Language Icon" class="w-7" />
+          <!-- Texto que cambia con el idioma -->
+          <span class="ml-2 font-semibold text-lg md:text-xl">{translations.languageSwitch}</span>
+        </button>
+      </div>
+      <!-- Dark Mode Toggle -->
+      <div class="m-auto mx-2 cursor-pointer transition duration-700 ease-in-out">
+        <button
+          id="theme-toggle"
+          class="theme-toggle block"
+          aria-label="Toggle theme"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="dark:hidden p-2 hover:bg-green-300 dark:hover:bg-green-700 rounded-lg transition duration-700 ease-in-out"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              clip-rule="evenodd"></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="hidden dark:block p-2 text-white dark:hover:bg-green-700 rounded-lg transition duration-700 ease-in-out"
+          >
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="flex flex-row my-5 lg:hidden">
+        <!-- Mobile menu button -->
+        <button
+          id="menu-toggle"
+          class="block lg:hidden text-black dark:text-white hover:bg-green-300 dark:hover:bg-green-700 px-2 rounded-lg focus:outline-none transition duration-700 ease-in-out"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden dark:bg-slate-900/5 justify-center"
+  >
+    <ul class="flex flex-col items-start p-4 space-y-4 md:text-xl">
+      <li
+        class="hover:bg-green-300 dark:text-white dark:hover:bg-green-700 py-3 px-4 rounded-lg w-full text-center transition duration-700 ease-in-out"
+      >
+        <a href="#about">{translations.navbar.about}</a>
+      </li>
+      <li
+        class="hover:bg-green-300 dark:text-white dark:hover:bg-green-700 py-3 px-4 rounded-lg w-full text-center transition duration-700 ease-in-out"
+      >
+        <a href="#proyect">{translations.navbar.proyect}</a>
+      </li>
+      <li
+        class="hover:bg-green-300 dark:text-white dark:hover:bg-green-700 py-3 px-4 rounded-lg w-full text-center transition duration-700 ease-in-out"
+      >
+        <a href="#skill">{translations.navbar.skill}</a>
+      </li>
+      <li
+        class="hover:bg-green-300 dark:text-white dark:hover:bg-green-700 py-3 px-4 rounded-lg w-full text-center transition duration-700 ease-in-out"
+      >
+        <a href="#experience">{translations.navbar.experience}</a>
+      </li>
+      <li
+        class="hover:bg-green-300 dark:text-white dark:hover:bg-green-700 py-3 px-4 rounded-lg w-full text-center transition duration-700 ease-in-out"
+      >
+        <a href="#contact">{translations.navbar.contact}</a>
+      </li>
+    </ul>
+  </div>
+  ) : (
+  <p>Error: Traducciones no encontradas.</p>
+)}
+</header>
+
+<script is:inline>
+  function getThemePreference() {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  }
+
+  function setTheme(theme) {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("theme", theme);
+  }
+
+  setTheme(getThemePreference());
+
+  window.addEventListener("load", () => {
+    const themeToggle = document.getElementById("theme-toggle");
+    if (themeToggle) {
+      themeToggle.addEventListener("click", () => {
+        const currentTheme = getThemePreference();
+        setTheme(currentTheme === "dark" ? "light" : "dark");
+      });
+    }
+  });
+
+  document.addEventListener("astro:after-swap", () => {
+    setTheme(getThemePreference());
+  });
+
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+<style>
+  header {
+    font-family: "Anaheim", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+</style>

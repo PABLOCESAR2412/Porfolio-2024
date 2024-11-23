@@ -1,0 +1,79 @@
+--- 
+const translations = Astro.props.translations;
+---
+
+{
+  translations ? (
+    <section class="">
+        <div class="mt-10 px-4 md:px-20 xl:px-24">
+            <h2 class="text-3xl md:text-4xl text-green-500 font-bold mb-6">{translations.studies.grandtittle}</h2>
+            <div class="relative border-l-2 border-green-500 dark:border-green-400 pl-6">
+                <!-- Evento -->
+                <div class="relative mb-10">
+                <!-- Punto de la línea de tiempo -->
+                    <div class="absolute -left-[32.7px] top-0 w-4 h-4 bg-green-500 dark:bg-green-400 rounded-full"></div>
+                    <!-- Contenido del evento -->
+                    <div>
+                        <h3 class="text-xl md:text-3xl font-bold text-green-500 dark:text-green-400">{translations.studies.first.tittle}</h3>
+                        <p class="text-lg md:text-2xl font-medium text-gray-600 dark:text-gray-300">{translations.studies.first.subtittle}</p>
+                        <span class="block text-sm md:text-xl text-gray-500 dark:text-gray-400 mb-3">{translations.studies.first.date}</span>
+                            <div class="flex justify-start pb-7">
+                                <a href="https://drive.google.com/file/d/1uiPYpUSHCDmeMUPCuZqrN7m5g8hUXcd6/view" class="flex border-2 border-black shadow-black dark:border-white shadow-md dark:shadow-white w-32 justify-around px-4 py-1 rounded-3xl items-center transition duration-700 ease-in-out">
+                                <img
+                                    src="/icon_link_white.svg"
+                                    alt=""
+                                    class="hidden dark:block w-6 mr-1"
+                                />
+                                <img
+                                    src="/icon_link_black.svg"
+                                    alt=""
+                                    class="dark:hidden w-6 mr-1"
+                                />
+                                <p class="font-bold text-black dark:text-white text-lg tracking-widest">{translations.link}</p>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+
+                <!-- Evento -->
+                <div class="relative mb-10">
+                <!-- Punto de la línea de tiempo -->
+                    <div class="absolute -left-[32.7px] top-0 w-4 h-4 bg-green-500 dark:bg-green-400 rounded-full"></div>
+                    <!-- Contenido del evento -->
+                    <div>
+                        <h3 class="text-xl md:text-3xl font-bold text-green-500 dark:text-green-400">{translations.studies.second.tittle}</h3>
+                        <p class="text-lg md:text-2xl font-medium text-gray-600 dark:text-gray-300">{translations.studies.second.subtittle}</p>
+                        <span class="block text-sm md:text-xl text-gray-500 dark:text-gray-400 mb-3">{translations.studies.second.date}</span>
+                            <div class="flex justify-start pb-7">
+                                <a href="https://drive.google.com/file/d/1gTUtl1v3j_ZvAxyxeF41c6XmESQlE_oZ/view" class="flex border-2 border-black shadow-black dark:border-white shadow-md dark:shadow-white w-32 justify-around px-4 py-1 rounded-3xl items-center transition duration-700 ease-in-out">
+                                <img
+                                    src="/icon_link_white.svg"
+                                    alt=""
+                                    class="hidden dark:block w-6 mr-1"
+                                />
+                                <img
+                                    src="/icon_link_black.svg"
+                                    alt=""
+                                    class="dark:hidden w-6 mr-1"
+                                />
+                                <p class="font-bold text-black dark:text-white text-lg tracking-widest">{translations.link}</p>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  ) : (
+    <p>Error: Traducciones no encontradas.</p>
+  )
+}
+
+<style>
+  section {
+    font-family: "Anaheim", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+</style>
