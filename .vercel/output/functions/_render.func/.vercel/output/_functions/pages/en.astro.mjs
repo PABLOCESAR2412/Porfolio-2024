@@ -1,7 +1,7 @@
 /* empty css                                 */
-import { c as createComponent, r as renderTemplate, a as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_BCn1jvSO.mjs';
+import { c as createComponent, r as renderTemplate, a as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_CiaMfGYg.mjs';
 import 'kleur/colors';
-import { $ as $$Navbar, a as $$About, b as $$Project, c as $$Skills, d as $$Experience, e as $$Studies, f as $$Courses, g as $$Contact, h as $$Footer, i as $$Layout } from '../chunks/Footer_Bh1uiJeR.mjs';
+import { $ as $$Navbar, a as $$About, b as $$Project, c as $$Skills, d as $$Experience, e as $$Studies, f as $$Courses, g as $$Contact, h as $$Footer, i as $$Layout } from '../chunks/Footer_BQjO_C_c.mjs';
 export { renderers } from '../renderers.mjs';
 
 const navbar = {
@@ -142,7 +142,7 @@ const $$Index = createComponent(($$result, $$props, $$slots) => {
 }, "C:/Proyectos/Astro/Porfolio_2024_v1/src/pages/en/index.astro", void 0);
 
 const $$file = "C:/Proyectos/Astro/Porfolio_2024_v1/src/pages/en/index.astro";
-const $$url = "/en";
+const $$url = "/es/en";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
     __proto__: null,

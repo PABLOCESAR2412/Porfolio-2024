@@ -1,6 +1,6 @@
 import { parse } from 'devalue';
 import { escape } from 'html-escaper';
-import { D as DEFAULT_404_COMPONENT } from './astro/server_BCn1jvSO.mjs';
+import { D as DEFAULT_404_COMPONENT } from './astro/server_CiaMfGYg.mjs';
 
 const NOOP_MIDDLEWARE_FN = (_, next) => next();
 
@@ -10,7 +10,7 @@ const ACTION_QUERY_PARAMS = {
   actionRedirect: "_astroActionRedirect"
 };
 
-const __vite_import_meta_env__ = {"ASSETS_PREFIX": undefined, "BASE_URL": "/", "DEV": false, "MODE": "production", "PROD": true, "SITE": undefined, "SSR": true};
+const __vite_import_meta_env__ = {"ASSETS_PREFIX": undefined, "BASE_URL": "/es", "DEV": false, "MODE": "production", "PROD": true, "SITE": undefined, "SSR": true};
 const codeToStatusMap = {
   // Implemented from tRPC error code table
   // https://trpc.io/docs/server/error-handling#error-codes
