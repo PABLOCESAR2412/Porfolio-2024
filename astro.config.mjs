@@ -9,17 +9,19 @@ import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
-  devToolbar: {
-      enabled: false
-  },
+    devToolbar: {
+        enabled: false
+    },
 
-  integrations: [tailwind(), react()],
+    integrations: [tailwind(), react()],
 
-  i18n: {
-      defaultLocale: 'es',
-      locales: ['es', 'en']
-  },
+    i18n: {
+        defaultLocale: 'es',
+        locales: ['es', 'en']
+    },
 
-  output: 'server',
-  adapter: vercel()
+    output: 'server',
+    adapter: vercel(),
+    outDir: './dist', // La carpeta de salida donde se generará el proyecto
+    base: '/es',
 });
