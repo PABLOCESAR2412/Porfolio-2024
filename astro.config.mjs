@@ -9,6 +9,7 @@ import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
+
     base: '/es', // Camino base del sitio
     outDir: './dist', // Carpeta de salida predeterminada
     build: {
